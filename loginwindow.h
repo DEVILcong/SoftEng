@@ -7,8 +7,8 @@
 #include <QSqlError>
 #include <QMessageBox>
 #include <QSqlDatabase>
-#include <QSqlError>
 
+#include "form.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class loginwindow; }
@@ -19,15 +19,15 @@ class loginwindow : public QWidget
     Q_OBJECT
 
 public:
-    loginwindow(QSqlDatabase *db, QWidget *parent = nullptr);
+    loginwindow(Form *mainWin, QSqlDatabase *db, QWidget *parent = nullptr);
     ~loginwindow();
-    int ifOpen = 1;  //to 0 if this closed
 
 private:
     Ui::loginwindow *ui_login;
+    Form *mainWindow;
+    QSqlDatabase *maindb;
     QString name;
     QString passwd;
-    QSqlDatabase *dbStar;
 
 private slots:
     void ackClicked();

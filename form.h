@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QDebug>
 #include <QSqlDatabase>
-#include "loginwindow.h"
+#include <QMessageBox>
 #include "searchwindow.h"
 #include "alterwindow.h"
 
@@ -17,10 +17,9 @@ class Form : public QWidget
     Q_OBJECT
 
 public:
-    explicit Form(QWidget *parent = nullptr);
+    explicit Form(QSqlDatabase *db, QWidget *parent = nullptr);
     ~Form();
     bool isLogin();
-    loginwindow *login = nullptr;
 
 public slots:
     void searchWinShow();
@@ -36,7 +35,7 @@ private:
     Ui::Form *ui;
     searchWindow seWin;
     alterWindow *alWin;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");    //main database
+    QSqlDatabase *mainDB;
 };
 
 #endif // FORM_H

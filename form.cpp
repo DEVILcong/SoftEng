@@ -1,13 +1,12 @@
 #include "form.h"
 #include "ui_form.h"
 
-Form::Form(QWidget *parent) :
+Form::Form(QSqlDatabase *db, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-    login = new loginwindow(&db);
-    login->show();
+    mainDB = db;
     connect(ui->pushButton_8, &QPushButton::clicked, this, &QWidget::close);
     connect(ui->pushButton, &QPushButton::clicked, this, &Form::searchWinShow);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &Form::alterWinShow_build);
@@ -95,7 +94,7 @@ void Form::messageBox_me()
 
 bool Form::isLogin()
 {
-    if(!db.isOpen())
+    if(!mainDB->isOpen())
     {
         QMessageBox::critical(this,"警告","请先登录");
         return false;
@@ -105,8 +104,7 @@ bool Form::isLogin()
 
 Form::~Form()
 {
-    delete login;
     delete alWin;
-    db.close();
+    mainDB->close();
     delete ui;
 }
