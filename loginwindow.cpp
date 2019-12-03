@@ -40,8 +40,8 @@ void loginwindow::ackClicked()
             if(!maindb->open())
             {
                 QMessageBox::information(this,tr("失败"), tr("连接失败,请重试"));
-                QSqlError errorResult = maindb->lastError();
-                qDebug()<< errorResult.driverText();
+//                QSqlError errorResult = maindb->lastError();
+//                qDebug()<< errorResult.driverText();
              }
             else
             {
