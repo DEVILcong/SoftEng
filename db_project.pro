@@ -16,24 +16,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    alterwindow.cpp \
+    bookin.cpp \
+    contentin.cpp \
     form.cpp \
     main.cpp \
     loginwindow.cpp \
-    searchwindow.cpp \
+    search.cpp \
     test1.cpp
 
 HEADERS += \
-    alterwindow.h \
+    bookin.h \
+    contentin.h \
     form.h \
     loginwindow.h \
-    searchwindow.h
+    search.h
 
 FORMS += \
-    alterwindow.ui \
+    bookin.ui \
+    contentin.ui \
     form.ui \
     loginwindow.ui \
-    searchwindow.ui
+    search.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -23,7 +23,7 @@ public:
     ~loginwindow();
 
 private:
-    Ui::loginwindow *ui_login;
+    Ui::loginwindow *ui;
     Form *mainWindow;
     QSqlDatabase *maindb;
     QString name;

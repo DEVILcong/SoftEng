@@ -5,8 +5,6 @@
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QMessageBox>
-#include "searchwindow.h"
-#include "alterwindow.h"
 
 namespace Ui {
 class Form;
@@ -22,19 +20,9 @@ public:
     bool isLogin();
 
 public slots:
-    void searchWinShow();
-    void alterWinShow_build();
-    void alterWinShow_room();
-    void alterWindow_people();
-    void alterWindow_worker();
-    void alterWindow_charge();
-    void alterWindow_quest();
-    void messageBox_me();
 
 private:
     Ui::Form *ui;
-    searchWindow seWin;
-    alterWindow *alWin;
     QSqlDatabase *mainDB;
 };
 

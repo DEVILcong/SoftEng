@@ -3,24 +3,24 @@
 
 loginwindow::loginwindow(Form *mainWin, QSqlDatabase *db, QWidget *parent)
     : QWidget(parent)
-    , ui_login(new Ui::loginwindow)
+    , ui(new Ui::loginwindow)
 {
-    ui_login->setupUi(this);
+    ui->setupUi(this);
     mainWindow = mainWin;
     maindb = db;
-    connect(ui_login->pushButton_2,&QPushButton::clicked,this,&QWidget::close);
-    connect(ui_login->pushButton_1,&QPushButton::clicked,this,&loginwindow::ackClicked);
+    connect(ui->pushButton_2,&QPushButton::clicked,this,&QWidget::close);
+    connect(ui->pushButton_1,&QPushButton::clicked,this,&loginwindow::ackClicked);
 }
 
 loginwindow::~loginwindow()
 {
-    delete ui_login;
+    delete ui;
 }
 
 void loginwindow::ackClicked()
 {
-    name = ui_login->lineEdit_1->text();
-    passwd = ui_login->lineEdit_2->text();
+    name = ui->lineEdit_1->text();
+    passwd = ui->lineEdit_2->text();
 
     //qDebug()<<name<<","<<passwd;
 
