@@ -21,6 +21,7 @@ SOURCES += \
     form.cpp \
     main.cpp \
     loginwindow.cpp \
+    menuuser.cpp \
     search.cpp \
     test1.cpp
 
@@ -29,6 +30,7 @@ HEADERS += \
     contentin.h \
     form.h \
     loginwindow.h \
+    menuuser.h \
     search.h
 
 FORMS += \
@@ -36,6 +38,7 @@ FORMS += \
     contentin.ui \
     form.ui \
     loginwindow.ui \
+    menuuser.ui \
     search.ui
 
 # Default rules for deployment.
