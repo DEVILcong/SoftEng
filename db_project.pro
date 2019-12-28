@@ -17,29 +17,40 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bookin.cpp \
+    borrow.cpp \
     contentin.cpp \
     form.cpp \
     main.cpp \
     loginwindow.cpp \
     menuuser.cpp \
+    returnBook.cpp \
+    returnbook.cpp \
     search.cpp \
+    searchcontent.cpp \
     test1.cpp
 
 HEADERS += \
     bookin.h \
+    borrow.h \
     contentin.h \
     form.h \
     loginwindow.h \
     menuuser.h \
-    search.h
+    returnbook.h \
+    search.h \
+    searchcontent.h
 
 FORMS += \
     bookin.ui \
+    borrow.ui \
     contentin.ui \
     form.ui \
     loginwindow.ui \
     menuuser.ui \
-    search.ui
+    returnBook.ui \
+    returnbook.ui \
+    search.ui \
+    searchcontent.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

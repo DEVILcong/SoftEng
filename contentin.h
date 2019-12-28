@@ -2,6 +2,8 @@
 #define CONTENTIN_H
 
 #include <QWidget>
+#include <QSqlTableModel>
+#include <QTimer>
 
 namespace Ui {
 class ContentIn;
@@ -17,6 +19,13 @@ public:
 
 private:
     Ui::ContentIn *ui;
+    QSqlTableModel *table;
+    QTimer *timer;
+
+    void initilizeTable(void);
+
+ public slots:
+    void isDerty();
 };
 
 #endif // CONTENTIN_H

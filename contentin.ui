@@ -6,114 +6,47 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>546</width>
-    <height>341</height>
+    <width>734</width>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ContentIn</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
+  <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>20</y>
-     <width>181</width>
-     <height>221</height>
+     <x>20</x>
+     <y>31</y>
+     <width>691</width>
+     <height>321</height>
     </rect>
    </property>
-   <property name="title">
-    <string>GroupBox</string>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>文章名称</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>作者</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>关键词信息</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>所在期刊CN号</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>所在期刊的年、卷、期信息</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>文章在所在期刊的起止页数</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>10</y>
-     <width>140</width>
-     <height>223</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>GroupBox</string>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLineEdit" name="lineEdit"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_2"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_3"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_4"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_5"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_6"/>
-    </item>
-   </layout>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>270</y>
-     <width>90</width>
-     <height>32</height>
+     <x>310</x>
+     <y>370</y>
+     <width>88</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>确定</string>
+    <string>Quit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>596</x>
+     <y>10</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

@@ -10,23 +10,24 @@ BookIn::BookIn(QWidget *parent) :
     initilizeTable();
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &BookIn::ifDerty);
+    connect(ui->pushButton, &QPushButton::clicked, this, this->close());
     timer->start(2000);
 
 }
-
 void BookIn::initilizeTable()
 {
     table = new QSqlTableModel(this);
-    table->setTable("tmpBook");
+    table->setTable("Book");
     table->setEditStrategy(QSqlTableModel::OnRowChange);
 
-    table->setHeaderData(0, Qt::Horizontal, QString("CN刊号"));
-    table->setHeaderData(1, Qt::Horizontal, QString("期刊名"));
-    table->setHeaderData(2, Qt::Horizontal, QString("年"));
-    table->setHeaderData(3, Qt::Horizontal, QString("卷"));
-    table->setHeaderData(4, Qt::Horizontal, QString("期"));
-    table->setHeaderData(5, Qt::Horizontal, QString("持有量"));
-    table->setHeaderData(6, Qt::Horizontal, QString("可借阅数"));
+    table->setHeaderData(0, Qt::Horizontal, QString("序号"));
+    table->setHeaderData(1, Qt::Horizontal, QString("CN刊号"));
+    table->setHeaderData(2, Qt::Horizontal, QString("期刊名"));
+    table->setHeaderData(3, Qt::Horizontal, QString("年"));
+    table->setHeaderData(4, Qt::Horizontal, QString("卷"));
+    table->setHeaderData(5, Qt::Horizontal, QString("期"));
+    table->setHeaderData(6, Qt::Horizontal, QString("持有量"));
+    table->setHeaderData(7, Qt::Horizontal, QString("可借阅数"));
 
     table->select();
 
