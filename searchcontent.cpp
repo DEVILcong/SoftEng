@@ -1,7 +1,7 @@
 #include "searchcontent.h"
 #include "ui_searchcontent.h"
 
-searchContent::searchContent(QWidget *parent) :
+searchContent::searchContent(int readOnly, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::searchContent)
 {
@@ -10,6 +10,9 @@ searchContent::searchContent(QWidget *parent) :
     connect(ui->pushButton, &QPushButton::clicked, this, &searchContent::searchName);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &searchContent::searchAuthor);
     connect(ui->pushButton_3, &QPushButton::clicked, this, &searchContent::searchKwd);
+
+    if(readOnly == 1)
+        ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 void searchContent::initilizeTable(void)
@@ -36,7 +39,7 @@ void searchContent::initilizeTable(void)
 void searchContent::searchName()
 {
     contentName = ui->lineEdit->text();
-    query = "name=\'"+contentName+"\'";
+    query = "name LIKE \'%"+contentName+"%\'";
     model->setFilter(query);
     model->select();
     ui->tableView->setModel(model);
@@ -44,7 +47,7 @@ void searchContent::searchName()
 void searchContent::searchAuthor()
 {
     contentAuthor = ui->lineEdit_2->text();
-    query = "author=\'"+contentAuthor+"\'";
+    query = "author LIKE \'%"+contentAuthor+"%\'";
     model->setFilter(query);
     model->select();
     ui->tableView->setModel(model);
@@ -52,7 +55,7 @@ void searchContent::searchAuthor()
 void searchContent::searchKwd()
 {
     contentKwd = ui->lineEdit_3->text();
-    query = "kwd=\'"+contentKwd+"\'";
+    query = "kwd LIKE \'%"+contentKwd+"%\'";
     model->setFilter(query);
     model->select();
     ui->tableView->setModel(model);

@@ -8,7 +8,7 @@ ContentIn::ContentIn(QWidget *parent) :
     ui->setupUi(this);
     initilizeTable();
     timer = new QTimer(this);
-    connect(ui->pushButton, &QPushButton::click, this, this->close());
+    connect(ui->pushButton, &QPushButton::click, this, &ContentIn::close);
     connect(timer, &QTimer::timeout, this, &ContentIn::isDerty);
     timer->start(2000);
 }

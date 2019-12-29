@@ -10,7 +10,7 @@ BookIn::BookIn(QWidget *parent) :
     initilizeTable();
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &BookIn::ifDerty);
-    connect(ui->pushButton, &QPushButton::clicked, this, this->close());
+    connect(ui->pushButton, &QPushButton::clicked, this, &BookIn::close);
     timer->start(2000);
 
 }

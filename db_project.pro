@@ -23,10 +23,12 @@ SOURCES += \
     main.cpp \
     loginwindow.cpp \
     menuuser.cpp \
-    returnBook.cpp \
     returnbook.cpp \
     search.cpp \
+    searchborrow.cpp \
     searchcontent.cpp \
+    searchuser.cpp \
+    stusearchborrow.cpp \
     test1.cpp
 
 HEADERS += \
@@ -38,7 +40,10 @@ HEADERS += \
     menuuser.h \
     returnbook.h \
     search.h \
-    searchcontent.h
+    searchborrow.h \
+    searchcontent.h \
+    searchuser.h \
+    stusearchborrow.h
 
 FORMS += \
     bookin.ui \
@@ -47,10 +52,12 @@ FORMS += \
     form.ui \
     loginwindow.ui \
     menuuser.ui \
-    returnBook.ui \
     returnbook.ui \
     search.ui \
-    searchcontent.ui
+    searchborrow.ui \
+    searchcontent.ui \
+    searchuser.ui \
+    stusearchborrow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

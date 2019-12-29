@@ -29,20 +29,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="text">
-      <string>期刊借阅情况查询</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="text">
-      <string>个人信息查询</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QPushButton" name="pushButton_5">
      <property name="text">
       <string>个人借阅情况查询</string>

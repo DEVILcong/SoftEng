@@ -9,6 +9,7 @@
 #include <QSqlDatabase>
 
 #include "form.h"
+#include "menuuser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class loginwindow; }
@@ -19,12 +20,13 @@ class loginwindow : public QWidget
     Q_OBJECT
 
 public:
-    loginwindow(Form *mainWin, QSqlDatabase *db, QWidget *parent = nullptr);
+    loginwindow(Form *mainWin, MenuUser *user, QSqlDatabase *db, QWidget *parent = nullptr);
     ~loginwindow();
 
 private:
     Ui::loginwindow *ui;
     Form *mainWindow;
+    MenuUser *menuUser;
     QSqlDatabase *maindb;
     QString name;
     QString passwd;

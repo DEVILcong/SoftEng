@@ -1,4 +1,5 @@
 #include "form.h"
+#include "menuuser.h"
 #include "loginwindow.h"
 
 #include <QApplication>
@@ -11,8 +12,8 @@ int main(int argc, char *argv[])
 
     QSqlDatabase mainDB = QSqlDatabase::addDatabase("QMYSQL");
     Form mainWin(&mainDB);
-    loginwindow login(&mainWin, &mainDB);
+    MenuUser user(&mainDB);
+    loginwindow login(&mainWin, &user, &mainDB);
     login.show();
-
     return a.exec();
 }

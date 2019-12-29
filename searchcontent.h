@@ -13,7 +13,7 @@ class searchContent : public QWidget
     Q_OBJECT
 
 public:
-    explicit searchContent(QWidget *parent = nullptr);
+    explicit searchContent(int readOnly, QWidget *parent = nullptr);
     ~searchContent();
 
 private:

@@ -5,6 +5,14 @@
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QMessageBox>
+#include "bookin.h"
+#include "borrow.h"
+#include "contentin.h"
+#include "returnbook.h"
+#include "search.h"
+#include "searchborrow.h"
+#include "searchcontent.h"
+#include "searchuser.h"
 
 namespace Ui {
 class Form;
@@ -24,6 +32,24 @@ public slots:
 private:
     Ui::Form *ui;
     QSqlDatabase *mainDB;
+    BookIn *bookIn;
+    ContentIn *contentIn;
+    borrow *borrowWin;
+    returnBook *returnB;
+    search *searchB;
+    searchContent *searchC;
+    searchBorrow *searchBo;
+    searchUser *searchU;
+
+private slots:
+    void winBookIn(void);
+    void winContentIn(void);
+    void winBorrow(void);
+    void winReturn(void);
+    void winSearchB(void);
+    void winSearchC(void);
+    void winSearchBo(void);
+    void winSearchU(void);
 };
 
 #endif // FORM_H

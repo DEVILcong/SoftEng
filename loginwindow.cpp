@@ -1,12 +1,13 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 
-loginwindow::loginwindow(Form *mainWin, QSqlDatabase *db, QWidget *parent)
+loginwindow::loginwindow(Form *mainWin, MenuUser *user, QSqlDatabase *db, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::loginwindow)
 {
     ui->setupUi(this);
     mainWindow = mainWin;
+    menuUser = user;
     maindb = db;
     connect(ui->pushButton_2,&QPushButton::clicked,this,&QWidget::close);
     connect(ui->pushButton_1,&QPushButton::clicked,this,&loginwindow::ackClicked);
@@ -45,7 +46,11 @@ void loginwindow::ackClicked()
              }
             else
             {
-                mainWindow->show();
+                if(ui->radioButton->isChecked())
+                    mainWindow->show();
+                else if(ui->radioButton_2->isChecked())
+                    menuUser->show();
+
                 this->close();
             }
         }

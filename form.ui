@@ -33,13 +33,6 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="text">
-         <string>新阶段期刊订阅表建立</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
          <string>期刊入库</string>
@@ -50,13 +43,6 @@
        <widget class="QPushButton" name="pushButton_2">
         <property name="text">
          <string>内容登记</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_12">
-        <property name="text">
-         <string>本阶段期刊订阅表退役</string>
         </property>
        </widget>
       </item>
@@ -124,20 +110,6 @@
        <widget class="QPushButton" name="pushButton_11">
         <property name="text">
          <string>期刊文章查询</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="text">
-         <string>当前阶段订阅期刊查询</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="text">
-         <string>历史订阅期刊查询</string>
         </property>
        </widget>
       </item>

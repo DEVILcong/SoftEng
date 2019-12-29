@@ -1,7 +1,7 @@
 #include "search.h"
 #include "ui_search.h"
 
-search::search(QWidget *parent) :
+search::search(int readOnly, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::search)
 {
@@ -9,6 +9,9 @@ search::search(QWidget *parent) :
     initilizeTable();
     connect(ui->pushButton, &QPushButton::clicked, this, &search::searchCN);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &search::searchName);
+
+    if(readOnly == 1)
+        ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 void search::initilizeTable(void)
@@ -40,7 +43,7 @@ void search::searchCN()
 void search::searchName()
 {
     name = ui->lineEdit_2->text();
-    query = "bookName=\'"+name+"\'";
+    query = "bookName LIKE \'%"+name+"%\'";
     model->setFilter(query);
     model->select();
     ui->tableView->setModel(model);
