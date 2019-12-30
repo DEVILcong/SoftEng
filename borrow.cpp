@@ -21,7 +21,7 @@ void borrow::process()
     returnDate = ui->dateEdit_2->date();
     actulRetDate = ui->dateEdit_3->date();
 
-    QString getAviNum = "SELECT aviNum FROM"+table+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
+    QString getAviNum = "SELECT aviNum FROM "+table+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
     QString insert = "INSERT INTO "+table+" VALUES(\'"+cnNo+"\',\'"+nian+"\',\'"+juan+"\',\'"+qi+"\',\'"+stuNo+"\',\'"+borrowDate.toString("yyyyMMdd")+"\',\'"+borrowDays+"\',\'"+returnDate.toString("yyyyMMdd")+"\',\'"+actulRetDate.toString("yyyyMMdd")+"\');";
     QSqlQuery query;
 

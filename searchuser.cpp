@@ -32,37 +32,69 @@ void searchUser::initilizeTable(void)
 void searchUser::searchNo(void)
 {
     stuNo = ui->lineEdit->text();
+    if(stuNo == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
     query = "stuNo = \'"+stuNo+"\'";
     model->setFilter(query);
     model->select();
     ui->tableView->setModel(model);
+    }
 }
 
 void searchUser::searchName(void)
 {
     name = ui->lineEdit_2->text();
-    query = "name LIKE \'%"+stuNo+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(name == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "name LIKE \'%"+stuNo+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 void searchUser::searchGrade(void)
 {
     grade = ui->lineEdit_3->text();
-    query = "grade = \'"+grade+"\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(grade == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "grade = \'"+grade+"\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 void searchUser::searchGraduate(void)
 {
     graduate = ui->lineEdit_4->text();
-    query = "graduate = \'%"+graduate+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(graduate == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "graduate LIKE \'%"+graduate+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 searchUser::~searchUser()

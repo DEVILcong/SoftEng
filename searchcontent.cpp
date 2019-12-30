@@ -39,26 +39,50 @@ void searchContent::initilizeTable(void)
 void searchContent::searchName()
 {
     contentName = ui->lineEdit->text();
-    query = "name LIKE \'%"+contentName+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(contentName == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "name LIKE \'%"+contentName+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 void searchContent::searchAuthor()
 {
     contentAuthor = ui->lineEdit_2->text();
-    query = "author LIKE \'%"+contentAuthor+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(contentAuthor == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "author LIKE \'%"+contentAuthor+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 void searchContent::searchKwd()
 {
     contentKwd = ui->lineEdit_3->text();
-    query = "kwd LIKE \'%"+contentKwd+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(contentKwd == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "kwd LIKE \'%"+contentKwd+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 searchContent::~searchContent()

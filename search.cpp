@@ -34,19 +34,35 @@ void search::initilizeTable(void)
 void search::searchCN()
 {
     CN = ui->lineEdit->text();
-    query = "cnNo=\'"+CN+"\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(CN == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "cnNo=\'"+CN+"\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 void search::searchName()
 {
     name = ui->lineEdit_2->text();
-    query = "bookName LIKE \'%"+name+"%\'";
-    model->setFilter(query);
-    model->select();
-    ui->tableView->setModel(model);
+    if(name == NULL)
+    {
+        model->setFilter(NULL);
+        model->select();
+    }
+    else
+    {
+        query = "name LIKE \'%"+name+"%\'";
+        model->setFilter(query);
+        model->select();
+        ui->tableView->setModel(model);
+    }
 }
 
 search::~search()
