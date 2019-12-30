@@ -10,6 +10,7 @@ ContentIn::ContentIn(QWidget *parent) :
     timer = new QTimer(this);
     connect(ui->pushButton, &QPushButton::click, this, &ContentIn::close);
     connect(timer, &QTimer::timeout, this, &ContentIn::isDerty);
+    connect(ui->pushButton, &QPushButton::clicked, this, &ContentIn::close);
     timer->start(2000);
 }
 

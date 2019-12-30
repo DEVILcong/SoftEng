@@ -25,7 +25,7 @@ void Form::winBookIn(void)
     if(!isLogin())
         return;
 
-    bookIn = new BookIn(this);
+    bookIn = new BookIn;
     bookIn->show();
 }
 
@@ -34,7 +34,7 @@ void Form::winContentIn(void)
     if(!isLogin())
         return;
 
-    contentIn = new ContentIn(this);
+    contentIn = new ContentIn;
     contentIn->show();
 }
 void Form::winBorrow(void)
@@ -42,7 +42,7 @@ void Form::winBorrow(void)
     if(!isLogin())
         return;
 
-    borrowWin = new borrow(this);
+    borrowWin = new borrow;
     borrowWin->show();
 }
 void Form::winReturn(void)
@@ -50,7 +50,7 @@ void Form::winReturn(void)
     if(!isLogin())
         return;
 
-    returnB = new returnBook(this);
+    returnB = new returnBook;
     returnB->show();
 }
 void Form::winSearchB(void)
@@ -58,7 +58,7 @@ void Form::winSearchB(void)
     if(!isLogin())
         return;
 
-    searchB = new search(0, this);
+    searchB = new search(0);
     searchB->show();
 }
 void Form::winSearchC(void)
@@ -66,7 +66,7 @@ void Form::winSearchC(void)
     if(!isLogin())
         return;
 
-    searchC = new searchContent(0, this);
+    searchC = new searchContent(0);
     searchC->show();
 }
 void Form::winSearchBo(void)
@@ -74,7 +74,7 @@ void Form::winSearchBo(void)
     if(!isLogin())
         return;
 
-    searchBo = new searchBorrow(this);
+    searchBo = new searchBorrow;
     searchBo->show();
 }
 void Form::winSearchU(void)
@@ -82,7 +82,7 @@ void Form::winSearchU(void)
     if(!isLogin())
         return;
 
-    searchU = new searchUser(this);
+    searchU = new searchUser;
     searchU->show();
 }
 

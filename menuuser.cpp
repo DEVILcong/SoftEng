@@ -17,7 +17,7 @@ void MenuUser::winSearchB(void)
     if(!isLogin())
         return;
 
-    searchB = new search(1, this);
+    searchB = new search(1);
     searchB->show();
 }
 void MenuUser::winSearchC(void)
@@ -25,14 +25,14 @@ void MenuUser::winSearchC(void)
     if(!isLogin())
         return;
 
-    searchC = new searchContent(1, this);
+    searchC = new searchContent(1);
     searchC->show();
 }
 void MenuUser::winSearchBo(void)
 {
     if(!isLogin())
         return;
-    ssb = new stuSearchBorrow(this, maindb->userName());
+    ssb = new stuSearchBorrow(nullptr, maindb->userName());
     ssb->show();
 }
 
