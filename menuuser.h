@@ -7,6 +7,7 @@
 #include "search.h"
 #include "searchcontent.h"
 #include "stusearchborrow.h"
+#include "orderbook.h"
 
 namespace Ui {
 class MenuUser;
@@ -25,6 +26,7 @@ private:
     search *searchB;
     searchContent *searchC;
     stuSearchBorrow *ssb;
+    orderBook *order;
     QSqlDatabase *maindb;
 
     bool isLogin(void);
@@ -33,6 +35,7 @@ private slots:
     void winSearchB(void);
     void winSearchC(void);
     void winSearchBo(void);
+    void winOrder(void);
 };
 
 #endif // MENUUSER_H

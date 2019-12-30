@@ -23,6 +23,7 @@ SOURCES += \
     main.cpp \
     loginwindow.cpp \
     menuuser.cpp \
+    orderbook.cpp \
     returnbook.cpp \
     search.cpp \
     searchborrow.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     form.h \
     loginwindow.h \
     menuuser.h \
+    orderbook.h \
     returnbook.h \
     search.h \
     searchborrow.h \
@@ -52,6 +54,7 @@ FORMS += \
     form.ui \
     loginwindow.ui \
     menuuser.ui \
+    orderbook.ui \
     returnbook.ui \
     search.ui \
     searchborrow.ui \

@@ -46,6 +46,13 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>期刊征订</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>

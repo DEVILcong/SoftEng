@@ -19,7 +19,7 @@ void returnBook::process(void)
 
     QDate currDate = QDate::currentDate();
     QString date = currDate.toString("yyyyMMdd");
-    QString update = "UPDATE "+table+" SET actulRetDate=\'"+date+"\' WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
+    QString update = "UPDATE "+table+" SET actulRetDaye=\'"+date+"\' WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
 
     QSqlQuery query;
     if(!query.exec(update))

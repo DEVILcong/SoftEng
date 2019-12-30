@@ -28,7 +28,6 @@ void BookIn::initilizeTable()
     table->setHeaderData(5, Qt::Horizontal, tr("期"));
     table->setHeaderData(6, Qt::Horizontal, tr("持有量"));
     table->setHeaderData(7, Qt::Horizontal, tr("可借阅数"));
-    table->setHeaderData(8, Qt::Horizontal, tr("nohao"));
 
     table->select();
 

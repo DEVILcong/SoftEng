@@ -22,8 +22,8 @@ void searchBorrow::initilizeTable(void)
     model->setHeaderData(4, Qt::Horizontal, QString("借阅人学号"));
     model->setHeaderData(5, Qt::Horizontal, QString("借阅日期"));
     model->setHeaderData(6, Qt::Horizontal, QString("借阅天数"));
-    model->setHeaderData(7, Qt::Horizontal, QString("应归还日期"));
     model->setHeaderData(8, Qt::Horizontal, QString("实际归还日期"));
+    model->setHeaderData(7, Qt::Horizontal, QString("应归还日期"));
 
     model->select();
     ui->tableView->setModel(model);

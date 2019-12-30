@@ -12,6 +12,7 @@ Form::Form(QSqlDatabase *db, QWidget *parent) :
     connect(ui->pushButton_2, &QPushButton::clicked, this, &Form::winContentIn);
     connect(ui->pushButton_3, &QPushButton::clicked, this, &Form::winBorrow);
     connect(ui->pushButton_4, &QPushButton::clicked, this, &Form::winReturn);
+    connect(ui->pushButton_5, &QPushButton::clicked, this, &Form::winOrder);
     connect(ui->pushButton_9, &QPushButton::clicked, this, &Form::winSearchBo);
     connect(ui->pushButton_10, &QPushButton::clicked, this, &Form::winSearchB);
     connect(ui->pushButton_11, &QPushButton::clicked, this, &Form::winSearchC);
@@ -96,6 +97,15 @@ bool Form::isLogin()
     return true;
 }
 
+void Form::winOrder(void)
+{
+    if(!isLogin())
+        return;
+
+    order = new orderBook;
+    order->show();
+}
+
 Form::~Form()
 {
     mainDB->close();
@@ -108,4 +118,5 @@ Form::~Form()
     delete searchC;
     delete searchBo;
     delete searchU;
+    delete order;
 }

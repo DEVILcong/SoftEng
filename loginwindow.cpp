@@ -47,7 +47,12 @@ void loginwindow::ackClicked()
             else
             {
                 if(ui->radioButton->isChecked())
-                    mainWindow->show();
+                {
+                    if(ui->lineEdit->text() == "3.1415926")
+                        mainWindow->show();
+                    else
+                        QMessageBox::warning(this, "warning", "管理员密码错误");
+                }
                 else if(ui->radioButton_2->isChecked())
                     menuUser->show();
 

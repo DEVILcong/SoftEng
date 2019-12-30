@@ -21,6 +21,7 @@ public:
 private:
     Ui::borrow *ui;
     QString table = "borrowList";
+    QString bookTable = "Book";
     QString cnNo;
     QString nian;
     QString juan;

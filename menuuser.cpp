@@ -9,6 +9,7 @@ MenuUser::MenuUser(QSqlDatabase *db, QWidget *parent) :
     maindb = db;
     connect(ui->pushButton, &QPushButton::clicked, this, &MenuUser::winSearchB);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &MenuUser::winSearchC);
+    connect(ui->pushButton_3, &QPushButton::clicked, this, &MenuUser::winOrder);
     connect(ui->pushButton_5, &QPushButton::clicked, this, &MenuUser::winSearchBo);
 }
 
@@ -36,6 +37,15 @@ void MenuUser::winSearchBo(void)
     ssb->show();
 }
 
+void MenuUser::winOrder(void)
+{
+    if(!isLogin())
+        return;
+
+    order = new orderBook;
+    order->show();
+}
+
 bool MenuUser::isLogin()
 {
     if(!maindb->isOpen())
@@ -53,5 +63,6 @@ MenuUser::~MenuUser()
     delete searchB;
     delete  searchC;
     delete ssb;
+    delete order;
     delete maindb;
 }

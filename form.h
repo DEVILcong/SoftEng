@@ -13,6 +13,7 @@
 #include "searchborrow.h"
 #include "searchcontent.h"
 #include "searchuser.h"
+#include "orderbook.h"
 
 namespace Ui {
 class Form;
@@ -40,6 +41,7 @@ private:
     searchContent *searchC;
     searchBorrow *searchBo;
     searchUser *searchU;
+    orderBook *order;
 
 private slots:
     void winBookIn(void);
@@ -50,6 +52,7 @@ private slots:
     void winSearchC(void);
     void winSearchBo(void);
     void winSearchU(void);
+    void winOrder(void);
 };
 
 #endif // FORM_H

@@ -36,3 +36,13 @@ INSERT INTO userList VALUES(11, NULL, NULL, NULL, NULL);
 INSERT INTO userList VALUES(12, NULL, NULL, NULL, NULL);
 INSERT INTO userList VALUES(13, NULL, NULL, NULL, NULL);
 
+
+INSERT INTO Next_magazine_subscription VALUES("01", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("02", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("03", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("04", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("05", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("06", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("07", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("08", NULL, NULL, NULL);
+INSERT INTO Next_magazine_subscription VALUES("09", NULL, NULL, NULL);

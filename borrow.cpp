@@ -18,16 +18,16 @@ void borrow::process()
     stuNo = ui->lineEdit_5->text();
     borrowDate = ui->dateEdit->date();
     borrowDays = ui->lineEdit_6->text();
-    returnDate = ui->dateEdit_2->date();
-    actulRetDate = ui->dateEdit_3->date();
+    returnDate = ui->dateEdit_3->date();
+    actulRetDate = ui->dateEdit_2->date();
 
-    QString getAviNum = "SELECT aviNum FROM "+table+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
+    QString getAviNum = "SELECT aviNum FROM "+bookTable+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
     QString insert = "INSERT INTO "+table+" VALUES(\'"+cnNo+"\',\'"+nian+"\',\'"+juan+"\',\'"+qi+"\',\'"+stuNo+"\',\'"+borrowDate.toString("yyyyMMdd")+"\',\'"+borrowDays+"\',\'"+returnDate.toString("yyyyMMdd")+"\',\'"+actulRetDate.toString("yyyyMMdd")+"\');";
     QSqlQuery query;
 
     query.exec(getAviNum);
     query.first();
-    int aviNum = query.value('aviNum').toInt();
+    int aviNum = query.value("aviNum").toInt();
     if(aviNum == 0)
     {
         QMessageBox::warning(this, "警告", "可借阅书籍数不足");
@@ -41,7 +41,7 @@ void borrow::process()
         else
         {
             QString num = QString::number(aviNum-1);
-            QString update = "UPDATE "+table+" SET aviNum="+num+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
+            QString update = "UPDATE "+bookTable+" SET aviNum="+num+" WHERE cnNo=\'"+cnNo+"\' AND nian=\'"+nian+"\' AND juan=\'"+juan+"\' and qi=\'"+qi+"\';";
             query.exec(update);
             QString info = "当前图书可借阅数为"+num;
             QMessageBox::information(this, "借阅成功", info);
